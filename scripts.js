@@ -39,7 +39,7 @@ function pickRandomIndex(len, avoid = -1) {
 
 async function processOneLink(url, workerId) {
   log(`#${workerId} 開啟：${url}`);
-  const win = window.open('about:blank', '_blank',"width=375,height=812,left=100,top=100");
+  const win = window.open('about:blank', '_blank');
 
   if (!win || win.closed) {
     log(`#${workerId} ⚠️ 無法開啟新分頁（可能被瀏覽器阻擋）`);
@@ -139,3 +139,4 @@ function escapeHtml(s) {
     { '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c]
   ));
 }
+
